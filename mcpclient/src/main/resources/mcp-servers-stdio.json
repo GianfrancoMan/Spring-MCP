@@ -4,7 +4,7 @@
       "command": "C:\\Program Files\\Java\\jdk-25\\bin\\java.exe",
       "args": [
         "-jar",
-        "C:\\Users\\Utente\\Desktop\\From_Java_Dev_to_AI_Engineer\\section3_mcp\\mcpserverstdio\\target\\mcpserverstdio-0.0.1-SNAPSHOT.jar"
+        "[destion path for jar file]"
       ]
     },
     "filesystem": {
@@ -12,7 +12,7 @@
       "args": [
         "-y",
         "@modelcontextprotocol/server-filesystem",
-        "C:\\Users\\Utente\\Desktop\\From_Java_Dev_to_AI_Engineer\\section3_mcp\\McpFileSystemDir"
+        "[Destionation path for availble directory]"
       ]
     },
     "github": {
