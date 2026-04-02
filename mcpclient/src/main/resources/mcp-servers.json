@@ -5,7 +5,7 @@
       "args": [
         "-y",
         "@modelcontextprotocol/server-filesystem",
-        "C:\\Users\\Utente\\Desktop\\From_Java_Dev_to_AI_Engineer\\section3_mcp\\McpFileSystemDir"
+        "[destination path for jar file]"
       ]
     },
     "github": {
