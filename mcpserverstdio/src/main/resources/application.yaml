@@ -4,8 +4,8 @@ spring:
   data:
   datasource:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:file:c:/Users/Utente/Desktop/From_Java_Dev_to_AI_Engineer/section2/springai/chatmemory;AUTO_SERVER=TRUE
-    username: gianfo
+    url: jdbc:h2:file:<your path for file-db>;AUTO_SERVER=TRUE
+    username: user
     password: 12345
   jpa:
     hibernate:
