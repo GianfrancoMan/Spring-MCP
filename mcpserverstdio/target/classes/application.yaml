@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: mcpserverstdio
+  data:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:c:/Users/Utente/Desktop/From_Java_Dev_to_AI_Engineer/section2/springai/chatmemory;AUTO_SERVER=TRUE
+    username: gianfo
+    password: 12345
+  jpa:
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+  main:
+    web-application-type: none #perchè non vogio che il mio MCP-Server funzioni come un'applicazione web.
+    banner-mode: off #Disabilita il banner(Stessa spiegazione dei logs sotto)
+logging:
+  level:
+    root: ERROR #Verranno loggati solo gli errori, perchè l'mcp client considerebbe rilevanti tutte
+                          #le informazioni inviate  negli standard di input/output e questo è meglio evitarlo.
+                          #Nel caso, si può configurare un file di logging per scopi di debug(vedi documatazione)
+
+
