@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: mcpclient
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+    mcp:
+      client:
+        stdio:
+          servers-configuration: "classpath:mcp-servers.json"
+        streamable-http:
+          connections:
+            mcpserverremote:
+              url: http://localhost:8090
+              endpoint: /api/mcp
+
+#la configurazione del server mcp si troverà nel file mcp-servers.json, scarichera' il server mcp tramite NPX
+#essendo il server un applicazione scritta in NodeJs, nella configurazione sono anche riportate le/la cartelle
+#monitorabili e sulle quali  potra' fare operazioni il tool implementato dal server MCP FileSystem.
+#allo startup i dettagli del tool verranno recuperati da spring ai, ma tocca al programmatore fare in modo
+#che vengano iniettati nel ChatClient(vedere MCPClientController dove e' stato configurato il bean).
+
+logging:
+  pattern:
+    console: "%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) - %msg%n"
+  level:
+    org:
+      springframework:
+        ai:
+          chat:
+            client:
+              advisor: DEBUG #impostato a DEBUG per vedere i logs inviati dall'advisor integrato SimpleLoggerAdvisor(org.springframework.ai.chat.client.advisor)

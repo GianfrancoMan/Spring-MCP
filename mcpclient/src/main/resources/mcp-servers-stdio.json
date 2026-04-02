@@ -1,0 +1,33 @@
+{
+  "mcpServers": {
+    "spring-ai-mcp-stdio-and-remote": {
+      "command": "C:\\Program Files\\Java\\jdk-25\\bin\\java.exe",
+      "args": [
+        "-jar",
+        "C:\\Users\\Utente\\Desktop\\From_Java_Dev_to_AI_Engineer\\section3_mcp\\mcpserverstdio\\target\\mcpserverstdio-0.0.1-SNAPSHOT.jar"
+      ]
+    },
+    "filesystem": {
+      "command": "C:\\Users\\Utente\\node_modules\\.bin\\npx.cmd",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\Users\\Utente\\Desktop\\From_Java_Dev_to_AI_Engineer\\section3_mcp\\McpFileSystemDir"
+      ]
+    },
+    "github": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "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"
+      }
+    }
+  }
+}
